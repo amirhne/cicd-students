@@ -4,6 +4,10 @@
 
 Git bisect is a powerful debugging tool that uses binary search to efficiently find the commit that introduced a bug. Like the limit concept in calculus where you narrow down to a precise point, bisect systematically narrows down the range of commits until it pinpoints exactly where things went wrong.
 
+There's a famous paradox in mathematics called Zeno's Paradox: imagine a rabbit trying to reach a carrot. Each jump, the rabbit covers exactly half the remaining distance. First jump: halfway there. Second jump: half of what's left. Third jump: half again. The rabbit gets closer and closer but theoretically never quite arrives—yet in practice, it effectively reaches the goal. This is how limits work in calculus: approaching a target asymptotically.
+
+Git bisect works the same way. Each step, you're cutting the search space in half. You're not randomly jumping around—you're systematically narrowing down where the bug was introduced. With each bisect step, you halve the number of commits to check, rapidly converging on the exact commit that broke your code. Just like the rabbit and the limit, you're guaranteed to reach your answer efficiently.
+
 ## How it works
 
 1. **Define the range**: Mark a "bad" commit (where the bug exists) and a "good" commit (where it worked)
